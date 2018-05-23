@@ -1,0 +1,13 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+PERL_VERSION="5.24.4"
+PERL_PACKAGE="http://www.cpan.org/src/5.0/perl-5.24.4.tar.gz"
+
+curl -sL --compressed https://git.io/cpm > cpm

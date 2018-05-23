@@ -1,0 +1,12 @@
+#!/bin/sh
+
+BUILD_DIR=$1
+
+cat << EOF
+---
+config_vars:
+  PATH: $BUILD_DIR/local/bin:PATH
+  PERL5LIB: $BUILD_DIR/local/bin:PATH:$PERL5LIB
+default_process_types:
+  web: ./run
+EOF
